@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  # namespace: assignment-currency-app
+  name: dnstools
+spec:
+  containers:
+  - name: dnstools
+    image: infoblox/dnstools:latest
+    command:
+    - sleep
+    - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
